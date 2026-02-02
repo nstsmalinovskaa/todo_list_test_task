@@ -22,12 +22,6 @@ Start Docker containers:
 
 `docker compose up -d`
 
-Install dependencies and generate application key:
-
-`docker compose exec app composer install`
-
-`docker compose exec app php artisan key:generate`
-
 Run database migrations:
 
 `docker compose exec app php artisan migrate`
