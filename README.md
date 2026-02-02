@@ -4,7 +4,7 @@ REST API for managing tasks (To-Do List) built with PHP using the Laravel framew
 
 ### Stack
 
-- PHP 8.x
+- PHP 8.2
 - Laravel
 - MySQL
 - Docker
