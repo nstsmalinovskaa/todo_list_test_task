@@ -2,9 +2,13 @@
 
 namespace App\Http\Resources;
 
+use App\Dto\TaskData;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
+/**
+ * @mixin TaskData
+ */
 class TaskResource extends JsonResource
 {
     /**
@@ -14,6 +18,12 @@ class TaskResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'title' => $this->title,
+            'description' => $this->description,
+            'status' => $this->status,
+        ];
     }
 }
+
