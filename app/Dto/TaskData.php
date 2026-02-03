@@ -2,8 +2,8 @@
 
 namespace App\Dto;
 
-use Spatie\LaravelData\Data;
 use App\Enums\TaskStatus;
+use Spatie\LaravelData\Data;
 use Symfony\Contracts\Service\Attribute\Required;
 
 class TaskData extends Data

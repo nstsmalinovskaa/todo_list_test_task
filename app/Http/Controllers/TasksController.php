@@ -14,9 +14,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class TasksController extends Controller
 {
-    public function __construct(private readonly TaskService $service)
-    {
-    }
+    public function __construct(private readonly TaskService $service) {}
 
     public function index(): JsonResource
     {
@@ -45,6 +43,7 @@ class TasksController extends Controller
     public function destroy(int $taskId): JsonResponse
     {
         $this->service->deleteTask($taskId);
+
         return response()->json([], 204);
     }
 }

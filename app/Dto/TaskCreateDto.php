@@ -3,7 +3,6 @@
 namespace App\Dto;
 
 use App\Enums\TaskStatus;
-use App\Models\Task;
 use Spatie\LaravelData\Attributes\Validation\Sometimes;
 use Spatie\LaravelData\Data;
 use Symfony\Contracts\Service\Attribute\Required;
@@ -19,8 +18,5 @@ class TaskCreateDto extends Data
 
         #[Required]
         public TaskStatus $status = TaskStatus::NotStarted,
-    )
-    {
-    }
+    ) {}
 }
-

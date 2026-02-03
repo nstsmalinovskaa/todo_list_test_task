@@ -24,4 +24,4 @@ Start Docker containers:
 
 Run database migrations:
 
-`docker compose exec app php artisan migrate`
+`docker exec -it app bash php artisan migrate`

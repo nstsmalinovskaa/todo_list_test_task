@@ -18,7 +18,7 @@ return new class extends Migration
             $table->enum('status', [
                 'not_started',
                 'in_progress',
-                'done'
+                'done',
             ])->default('not_started');
 
             $table->timestamps();

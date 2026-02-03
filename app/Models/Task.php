@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use App\Enums\TaskStatus;
+use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -12,6 +12,7 @@ use App\Enums\TaskStatus;
  * @property TaskStatus $status
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task query()
@@ -21,6 +22,7 @@ use App\Enums\TaskStatus;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereStatus($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Task whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class Task extends Model

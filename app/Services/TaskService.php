@@ -18,8 +18,10 @@ class TaskService
         foreach ($tasks as $task) {
             $result[] = TaskData::from($task);
         }
+
         return $result ?? [];
     }
+
     public function getTask(int $taskId): TaskData
     {
         return TaskData::from(Task::findOrFail($taskId));
@@ -34,7 +36,7 @@ class TaskService
     {
         /** @var Task $task */
         $task = Task::findOrFail($updateDto->id);
-        $data = array_filter($updateDto->toArray(), fn($v) => $v !== null );
+        $data = array_filter($updateDto->toArray(), fn ($v) => $v !== null);
         $task->update($data);
     }
 
